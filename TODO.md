@@ -1,29 +1,21 @@
-# Modern UI Update Plan
+# Blog Filter Implementation TODO
 
-## Steps to Modernize the Webapp UI
+## Plan Summary
+Add a filter to the Dashboard component to show only the user's own blogs by toggling a UI element.
 
-1. **Update Tailwind Configuration** ✅
-   - Edit `frontend/tailwind.config.js` to define a custom color palette, typography, and spacing for a modern, clean theme.
-   - Add dark mode support.
+## Steps to Complete
+1. **Add Filter State**: Add `showMyBlogs` state variable in Dashboard.tsx.
+2. **Add Filter UI**: Add a checkbox or toggle button above the blogs list to enable/disable the filter.
+3. **Implement Filtering Logic**: Create `filteredBlogs` array based on `showMyBlogs` and `user?.name`.
+4. **Update Rendering**: Use `filteredBlogs` in the blogs display section and update the "No blogs found" message.
+5. **Handle Edge Cases**: Ensure filter is disabled if user is not logged in and resets on data refresh.
 
-2. **Enhance Global Styles** ✅
-   - Edit `frontend/src/index.css` to add CSS custom properties for theme colors and additional utility classes.
+## Progress
+- [x] Step 1: Add Filter State
+- [x] Step 2: Add Filter UI
+- [x] Step 3: Implement Filtering Logic
+- [x] Step 4: Update Rendering
+- [x] Step 5: Handle Edge Cases
 
-3. **Refine Navbar Component** ✅
-   - Edit `frontend/src/components/Navbar.tsx` to use new theme colors, add animations, and improve responsiveness.
-
-4. **Refine Dashboard Component** ✅
-   - Edit `frontend/src/components/Dashboard.tsx` to enhance layouts, buttons, and cards with the new theme.
-
-5. **Update Login Component** ✅
-   - Edit `frontend/src/components/Login.tsx` to apply the new theme and modernize the design.
-
-6. **Update Register Component** ✅
-   - Edit `frontend/src/components/Register.tsx` to apply the new theme and modernize the design.
-
-7. **Update Profile Page** ✅
-   - Edit `frontend/src/pages/Profile.tsx` for consistency with the new theme.
-
-8. **Test and Verify**
-   - Run the development server to test changes.
-   - Verify responsiveness and functionality.
+## Task Complete
+The blog filter has been successfully implemented in Dashboard.tsx. Users can now toggle to show only their own blogs.
